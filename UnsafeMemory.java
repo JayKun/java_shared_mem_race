@@ -25,6 +25,8 @@ class UnsafeMemory {
 		s = new BetterSafeRW(stateArg, maxval);
 	    else if (args[0].equals("SemBetter"))
 		s = new SemBetter(stateArg, maxval);
+	    else if (args[0].equals("AtomBetter"))
+		s = new AtomBetter(stateArg, maxval);
 	    else
 		throw new Exception(args[0]);
 	    dowork(nThreads, nTransitions, s);
